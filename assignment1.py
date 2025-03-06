@@ -1,4 +1,4 @@
-#!/usr/bin/env pyth3
+#!/usr/bin/env python3
 # Student ID: Michael Carlos
 
 """
@@ -59,19 +59,4 @@ if not valid_date(start_date) or not valid_date(end_date):
 # Calculate and print the result
 weekend_days = count_weekend_days(start_date, end_date)
 print(f"The period between {start_date} and {end_date} includes {weekend_days} weekend days.")
-
-# Convert the string date into a datetime object for comparison
-start = datetime.strptime(start_date, "%Y-%m-%d")
-
-def count_weekend_days(start_date: str, end_date: str) -> int:
-    """
-    Counts the number of weekend days (Saturdays and Sundays) between two given dates.
-    
-    Args:
-        start_date (str): The start date in YYYY-MM-DD format.
-        end_date (str): The end date in YYYY-MM-DD format.
-        
-    Returns:
-        int: The number of weekend days in the date range.
-    """
 

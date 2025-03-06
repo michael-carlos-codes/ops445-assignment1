@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Student ID: Michael Carlos
+
 import subprocess
 import sys
 
@@ -48,6 +51,12 @@ def test_missing_argument():
     expected_output = "Usage: assignment1.py YYYY-MM-DD YYYY-MM-DD"
     run_test(command, expected_output, expected_exit_code=1)
 
+def test_valid_date_with_custom_dates():
+    """Test with a valid custom date range for milestone 2"""
+    command = ['python3', 'assignment1.py', '2024-03-01', '2024-03-15']
+    expected_output = "The period between 2024-03-01 and 2024-03-15 includes 4 weekend days."
+    run_test(command, expected_output)
+
 def main():
     """Run all the tests"""
     print("Starting tests...\n")
@@ -57,6 +66,7 @@ def main():
     test_reversed_date_range()
     test_invalid_date()
     test_missing_argument()
+    test_valid_date_with_custom_dates()  # Add milestone 2 test
     
     print("\nAll tests passed!")
 
